@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Investments Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Update link at the top of the sidebar -->
+            <div class="update-section">
+                <a href="#" class="update-link">Update</a>
+            </div>
+
+           <div class="profile-section">
+               <!-- Profile photo section with a frame-like design -->
+               <div class="profile-pic-container">
+                   <img src="/assets/my photo.jpg" alt="Profile Picture" class="profile-pic" id="profileImage">
+               </div>
+               <button class="profile-btn" id="changeProfileBtn">Change Profile Picture</button>
+               <input type="file" id="fileInput" accept="image/*" style="display:none;">
+               <button class="logout-btn">Logout</button>
+           </div>
+
+            <div class="transactions-section">
+                <h3>Transactions-Go</h3>
+                <br>
+                <div class="entry-amount">
+                    <label for="entry-amount-input" class="entry-amount-input">Entry Amount</label>
+                    <input type="text" id="entry-amount-input">
+                </div>
+                <br><br>
+               <!-- Wrap the button inside an anchor tag -->
+<a href="deposit.html"><button class="sidebar-btn">Deposit</button></a>
+<a href="withdraw.html"><button class="sidebar-btn">Withdraw</button></a>
+<a href="borrow.html"><button class="sidebar-btn">Borrow</button></a>
+<a href="borrow-payback.html"><button class="sidebar-btn">Borrow Payback</button></a>
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header-content">
+                <h4>Dashboard Mrs Janeth Joe >>> HomePage</h4> 
+                <a href="#" class="home-link"><< Home</a>
+            </header>
+
+            <!-- Balance Section -->
+            <div class="balance-section">
+                <h4>N 1330</h4>
+                <p>Current Balance</p>
+            </div>
+
+            <!-- Account Information Section -->
+            <div class="account-section">
+                <div class="info-box personal-info">
+                    <h4>Full Name: Mrs Janeth Joe</h4>
+                    <p>Account Name: JanethJoe</p>
+                    <a href="update-personal-info.html"><button class="info-btn">Update Personal Info</button></a>
+                </div>
+                <div class="info-box deposit-info">
+                    <h4>N 1800</h4>
+                    <p>Total Deposit</p>
+                    <a href="deposit-info.html"><button class="info-btn">More Info</button></a>
+                </div>
+                <div class="info-box debt-info">
+                    <h4>N 0</h4>
+                    <p>Total Debt</p>
+                    <a href="debt-info.html"><button class="info-btn">More Info</button></a>
+                </div>
+                <div class="info-box contact-info">
+                    <h4>Location: 23 Alo street, Eke-Orin Nkwo, Enugu, Nigeria.</h4>
+                    <p>Phone: 8760986543</p>
+                    <a href="update-contact-info.html"><button class="info-btn">Update Contact Info</button></a>
+                </div>
+                <div class="info-box withdraw-info">
+                    <h4>500</h4>
+                    <p>Total Withdraw</p>
+                    <a href="withdraw-info.html"><button class="info-btn">More Info</button></a>
+                </div>
+                <div class="info-box transfer-info">
+                    <h4>500</h4>
+                    <p>Total Transfer</p>
+                    <a href="transfer-info.html"><button class="info-btn">More Info</button></a>
+                </div>
+            </div>
+            
+            <!-- Footer Section -->
+            <footer>
+                <div class="footer-box">
+                    <div class="footer-item">
+                        <h1>SWITCH</h1>
+                        <p>the sure investment you need</p>
+                    </div>
+                    <div class="footer-item">
+                        <h1>SWITCH</h1>
+                        <p>the sure investment you need</p>
+                    </div>
+                    <div class="footer-item">
+                        <h1>SWITCH</h1>
+                        <p>the sure investment you need</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 25%;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Update link section */
+        .update-section {
+            margin-bottom: 20px;
+        }
+
+        .update-link {
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .profile-section {
+            background-color: rgb(16, 58, 16); /* Dark green background */
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+
+        /* Framed profile picture container */
+        .profile-pic-container {
+            background-color: #fff; /* White background for contrast */
+            padding: 10px; /* Space around the image for white frame */
+            border: 20px solid black; /* Black frame */
+            box-shadow: 0 0 0 5px #fff; /* Outer brown/gold frame */
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .profile-pic {
+            width: 100px; /* Width of the profile image */
+            height: 150px; /* Height of the profile image */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        .profile-btn, .logout-btn {
+            width: 100%;
+            background-color: rgb(16, 58, 16);
+            color: white;
+            padding: 8px 0;
+            box-shadow: 0 2px black; /* Outer black */
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .logout-btn {
+            color: red;
+        }
+
+        .transactions-section {
+            margin-top: -20px;
+            background-color: green;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .entry-amount {
+            text-align: center;
+        }
+        .entry-amount-input {
+            background-color: #fff;
+            padding: 6px;
+            color: darkblue;
+            font-weight: 600;
+        }
+        .entry-amount input {
+            width: 50%;
+            height: 23px;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .sidebar-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            box-shadow: 0 2px black; /* Outer black */
+            color: rgb(4, 4, 71);
+            font-weight: 800;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            width: 75%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header-content h4 {
+            margin: 0;
+        }
+
+        .home-link {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .balance-section {
+            background-color: #FF6666;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .account-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .info-box {
+            flex: 1 1 30%;
+            background-color: #F0F0F0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .personal-info {
+            background-color: #66CC99;
+            color: #Fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .personal-info h4 {
+            margin-bottom: 40px;
+        }
+        .personal-info p {
+            margin-bottom: 30px;
+        }
+        .personal-info .info-btn {
+            margin-top: 10px;
+           background-color: #265226;
+           width: 100%;
+           text-align: center;
+        
+        }
+        .deposit-info {
+            background-color: skyblue;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .deposit-info h4 {
+            margin-bottom: 40px;
+        }
+        .deposit-info p {
+            margin-bottom: 30px;
+        }
+        .deposit-info .info-btn {
+            margin-top: 10px;
+            background-color: #00CCCC;
+            width: 100%;
+            text-align: center;
+        }
+
+        .debt-info {
+            background-color: #FF6666;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .debt-info h4 {
+            margin-bottom: 40px;
+        }
+        .debt-info p {
+            margin-bottom: 30px;
+        }
+        .debt-info .info-btn {
+            margin-top: 10px;
+            background-color: red;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-info {
+            background-color: #66CC99;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .contact-info h4 {
+            margin-bottom: 40px;
+        }
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+        .contact-info .info-btn {
+            margin-top: 10px;
+            background-color: #265226;
+            width: 100%;
+            text-align: center;
+        }
+        .withdraw-info {
+            background-color: #66CC99;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .withdraw-info h4 {
+            margin-bottom: 40px;
+        }
+        .withdraw-info p {
+            margin-bottom: 30px;
+        }
+       .withdraw-info .info-btn {
+            margin-top: 30px;
+            background-color: #265226;
+            width: 100%;
+            text-align: center;
+       }
+         .transfer-info {
+            background-color: #66CC99;
+            color: #fff;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 600;
+         }
+         .transfer-info h4 {
+             margin-bottom: 40px;
+         }
+         .transfer-info p {
+            margin-bottom: 30px;
+         }
+         .transfer-info .info-btn {
+            margin-top: 30px;
+            background-color: #265226;
+            width: 100%;
+            text-align: center;
+         }
+        .info-btn {
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+
+        }
+
+        .footer-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: #001f8e;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .footer-item {
+            text-align: center;
+        }
+    </style>
+
+<script>
+    // Get the elements from the DOM
+    const changeProfileBtn = document.getElementById('changeProfileBtn');
+    const fileInput = document.getElementById('fileInput');
+    const profileImage = document.getElementById('profileImage');
+
+    // Handle click event for the 'Change Profile Picture' button
+    changeProfileBtn.addEventListener('click', function() {
+        fileInput.click(); // Open file explorer
+    });
+
+    // Handle image upload and display preview
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0]; // Get the selected file
+        if (file) {
+            const reader = new FileReader();
+
+            // Define what to do once the file is loaded
+            reader.onload = function(e) {
+                profileImage.src = e.target.result; // Set the new image as the profile picture
+            };
+
+            // Check image size (optional) - Adjusted to 100x150 dimensions
+            const img = new Image();
+            img.src = URL.createObjectURL(file);
+            img.onload = function () {
+                const width = img.width;
+                const height = img.height;
+
+                if (width !== 100 || height !== 150) {
+                    alert("Please upload an image with 100x150 dimensions.");
+                } else {
+                    reader.readAsDataURL(file); // Read the file to trigger the 'onload' function
+                }
+            };
+        }
+    });
+</script>
+
+</body>
+</html>
